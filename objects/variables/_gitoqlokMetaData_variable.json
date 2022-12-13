@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "_gitoqlokMetaData_variable",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "_gitoqlokMetaData_variable",
+  "qComment": "Gitoqlok Metadata",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "{\"masterId\":\"44302b45-dddc-4a1f-9b41-c174b5ef4116\",\"infoByServerType\":{},\"updatedAt\":1665129410623}"
+}

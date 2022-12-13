@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "JbcQLwy",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Consumer Confidence",
+    "qDef": "sum({<KPINum={10}>}Value)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Title'},KPI_ID={10}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "R",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#.##0",
+      "qDec": ",",
+      "qThou": "."
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Consumer Confidence",
+    "description": "",
+    "tags": []
+  }
+}

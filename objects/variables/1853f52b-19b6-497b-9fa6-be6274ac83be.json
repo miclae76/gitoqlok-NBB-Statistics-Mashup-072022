@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "1853f52b-19b6-497b-9fa6-be6274ac83be",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "BE_KEY_CHOM",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "395",
+  "qIsScriptCreated": true
+}

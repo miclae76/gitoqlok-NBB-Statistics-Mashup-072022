@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "6b9b9dba-debb-43fb-8d96-43348f5c46ac",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "v.Lang",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "FR",
+  "tags": []
+}

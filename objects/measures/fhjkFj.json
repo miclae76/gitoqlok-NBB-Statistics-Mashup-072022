@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "fhjkFj",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Balance of current operations Latest",
+    "qDef": "IF(sum({<KPINum={4},Period={'$(vMaxPeriodKPI4)'}>}Value) >= sum({<KPINum={4},Period={'$(vMaxPeriodKPI4_lastmonth)'}>}Value),\r\nNum(sum({<KPINum={4},Period={'$(vMaxPeriodKPI4)'}>}Value),'#,##0')&' '&chr(9650),\nNum(sum({<KPINum={4},Period={'$(vMaxPeriodKPI4)'}>}Value),'#,##0')&' '&chr(9660))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "R",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#.##0",
+      "qDec": ",",
+      "qThou": "."
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Balance of current operations Latest",
+    "description": "",
+    "tags": []
+  }
+}

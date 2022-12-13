@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "DhvB",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Inflation Belgium",
+    "qDef": "Num(sum({<KPINum={5},Zone={'Belgium'}>}Value),'#,##0.0 %')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Generic'},KPI_ID={5}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.00%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Inflation Belgium",
+    "description": "",
+    "tags": []
+  }
+}

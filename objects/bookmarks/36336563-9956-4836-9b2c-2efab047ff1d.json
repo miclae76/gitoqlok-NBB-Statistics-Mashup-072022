@@ -1,0 +1,23 @@
+{
+  "qInfo": {
+    "qId": "36336563-9956-4836-9b2c-2efab047ff1d",
+    "qType": "bookmark"
+  },
+  "qMetaDef": {
+    "title": "BM1",
+    "description": "belgische economie"
+  },
+  "creationDate": "2021-06-07T08:19:20.019Z",
+  "sheetId": "bbfead08-a568-4131-8a2d-dffe807583f1",
+  "selectionFields": "",
+  "qBookMark": {
+    "qStateData": [
+      {
+        "qStateName": "$",
+        "qFieldItems": []
+      }
+    ],
+    "qVariableItems": [],
+    "qPatches": []
+  }
+}

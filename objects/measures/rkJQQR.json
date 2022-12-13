@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "rkJQQR",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "GDP EuroArea Latest",
+    "qDef": "'EU' & '  ' & \r\nIF(sum({<KPINum={1},PeriodTemp={'$(vMaxPeriodKPI1)'},Zone={'EuroArea'}>}Value) >= sum({<KPINum={1},PeriodTemp={'$(vMaxPeriodKPI1_lastquarter)'},Zone={'EuroArea'}>}Value),\nNum(sum({<KPINum={1},PeriodTemp={'$(vMaxPeriodKPI1)'},Zone={'EuroArea'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={1},PeriodTemp={'$(vMaxPeriodKPI1)'},Zone={'EuroArea'}>}Value),'#,##0.0 %')&' '&chr(9660)) ",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "GDP EuroArea Latest",
+    "description": "",
+    "tags": []
+  }
+}

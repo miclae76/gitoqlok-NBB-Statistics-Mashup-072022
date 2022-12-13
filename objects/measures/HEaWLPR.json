@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "HEaWLPR",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Public Debt Belgium Latest",
+    "qDef": "Upper(left(Only({<Type={'Generic'},KPI_ID={5}>}$(v.Lang)),2)) & '  ' & \r\nIF(sum({<KPINum={3},PeriodTemp={'$(vMaxPeriodKPI3)'},Zone={'Belgium'}>}Value) >= sum({<KPINum={3},PeriodTemp={'$(vMaxPeriodKPI3_lastquarter)'},Zone={'Belgium'}>}Value),\nNum(sum({<KPINum={3},PeriodTemp={'$(vMaxPeriodKPI3)'},Zone={'Belgium'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={3},PeriodTemp={'$(vMaxPeriodKPI3)'},Zone={'Belgium'}>}Value),'#,##0.0 %')&' '&chr(9660)) ",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Public Debt Belgium Latest",
+    "description": "",
+    "tags": []
+  }
+}

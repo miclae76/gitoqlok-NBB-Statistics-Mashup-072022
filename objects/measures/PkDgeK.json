@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "PkDgeK",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Inflation Rate Belgium Latest",
+    "qDef": "upper(left(Only({<Type={'Generic'},KPI_ID={5}>}$(v.Lang)), 2)) & '  '&\r\n\nIF(sum({<KPINum={5},Period={'$(vMaxPeriodKPI5)'},Zone={'Belgium'}>}Value) >= sum({<KPINum={5},Period={'$(vMaxPeriodKPI5_lastmonth)'},Zone={'Belgium'}>}Value),\nNum(sum({<KPINum={5},Period={'$(vMaxPeriodKPI5)'},Zone={'Belgium'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={5},Period={'$(vMaxPeriodKPI5)'},Zone={'Belgium'}>}Value),'#,##0.0 %')&' '&chr(9660)) ",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Inflation Rate Belgium Latest",
+    "description": "",
+    "tags": []
+  }
+}

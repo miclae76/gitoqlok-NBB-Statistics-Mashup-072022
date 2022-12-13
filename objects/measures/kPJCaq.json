@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "kPJCaq",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Consumer Confidence Latest",
+    "qDef": "\r\nIF(sum({<KPINum={10},Period={'$(vMaxPeriodKPI10)'}>}Value) >= sum({<KPINum={10},Period={'$(vMaxPeriodKPI10_lastmonth)'}>}Value),\nNum(sum({<KPINum={10},Period={'$(vMaxPeriodKPI10)'}>}Value),'#,##0')&' '&chr(9650),\nNum(sum({<KPINum={10},Period={'$(vMaxPeriodKPI10)'}>}Value),'#,##0')&' '&chr(9660))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Consumer Confidence Latest",
+    "description": "",
+    "tags": []
+  }
+}

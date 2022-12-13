@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "807d922a-48b8-496c-aa9b-ff1183d623f6",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vMaxPeriodKPI3_lastquarter",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "2020-09-30",
+  "qIsScriptCreated": true
+}

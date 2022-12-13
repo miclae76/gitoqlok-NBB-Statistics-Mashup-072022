@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "jaHjb",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Loans to Houselhold Latest",
+    "qDef": " \r\nIF(sum({<KPINum={11},Period={'$(vMaxPeriodKPI11)'}>}Value) >= sum({<KPINum={11},Period={'$(vMaxPeriodKPI11_lastmonth)'}>}Value),\nNum(sum({<KPINum={11},Period={'$(vMaxPeriodKPI11)'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={11},Period={'$(vMaxPeriodKPI11)'}>}Value),'#,##0.0 %')&' '&chr(9660))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Loans to Houselhold Latest",
+    "description": "",
+    "tags": []
+  }
+}

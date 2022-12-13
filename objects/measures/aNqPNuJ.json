@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "aNqPNuJ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Business Barometer",
+    "qDef": "sum({<KPINum={6}>}Value)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Title'},KPI_ID={6}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0.0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Business Barometer",
+    "description": "",
+    "tags": []
+  }
+}

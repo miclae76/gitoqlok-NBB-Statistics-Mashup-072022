@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "vvrJTt",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Long Term Rate Latest",
+    "qDef": "\r\nIF(sum({<KPINum={8},Period={'$(vMaxPeriodKPI8)'}>}Value) >= sum({<KPINum={8},Period={'$(vMaxPeriodKPI8_lastmonth)'}>}Value),\nNum(sum({<KPINum={8},Period={'$(vMaxPeriodKPI8)'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={8},Period={'$(vMaxPeriodKPI8)'}>}Value),'#,##0.0 %')&' '&chr(9660))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.00%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Long Term Rate Latest",
+    "description": "",
+    "tags": []
+  }
+}

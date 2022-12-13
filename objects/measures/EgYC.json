@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "EgYC",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Business Barometer Latest",
+    "qDef": " \r\nIF(sum({<KPINum={6},Period={'$(vMaxPeriodKPI6)'}>}Value) >= sum({<KPINum={6},Period={'$(vMaxPeriodKPI6_lastmonth)'}>}Value),\nNum(sum({<KPINum={6},Period={'$(vMaxPeriodKPI6)'}>}Value),'#,##0.0')&' '&chr(9650),\nNum(sum({<KPINum={6},Period={'$(vMaxPeriodKPI6)'}>}Value),'#,##0.0')&' '&chr(9660))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Business Barometer Latest",
+    "description": "",
+    "tags": []
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "PvGDms",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Loans to houselholds",
+    "qDef": "Num(sum({<KPINum={11}>}Value),'#,##0.0 %')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Title'},KPI_ID={11}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0.0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Loans to houselholds",
+    "description": "",
+    "tags": []
+  }
+}

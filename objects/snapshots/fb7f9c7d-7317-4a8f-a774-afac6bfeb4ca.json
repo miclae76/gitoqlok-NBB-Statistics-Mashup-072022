@@ -1,0 +1,144 @@
+{
+  "qInfo": {
+    "qId": "fb7f9c7d-7317-4a8f-a774-afac6bfeb4ca",
+    "qType": "snapshot"
+  },
+  "qMetaDef": {
+    "title": "Confiance des consommateurs",
+    "description": "",
+    "annotation": ""
+  },
+  "creationDate": "2021-06-10T13:29:07.326Z",
+  "qMeta": {
+    "privileges": [
+      "read",
+      "update",
+      "delete",
+      "exportdata"
+    ]
+  },
+  "qSelectionInfo": {},
+  "qHyperCube": {
+    "qSize": {
+      "qcx": 1,
+      "qcy": 1
+    },
+    "qDimensionInfo": [],
+    "qMeasureInfo": [
+      {
+        "qFallbackTitle": "Sum({<PeriodCons={44075}>}[Confiance des consommateurs.Belgium])",
+        "qApprMaxGlyphCount": 3,
+        "qCardinal": 0,
+        "qSortIndicator": "D",
+        "qNumFormat": {
+          "qType": "R",
+          "qnDec": 14,
+          "qUseThou": 1,
+          "qFmt": "##############",
+          "qDec": "."
+        },
+        "qMin": -16,
+        "qMax": -16,
+        "qIsAutoFormat": true,
+        "qAttrExprInfo": [],
+        "qAttrDimInfo": [],
+        "qTrendLines": [],
+        "autoSort": true,
+        "cId": "EamhUq",
+        "numFormatFromTemplate": true,
+        "measureAxis": {
+          "min": 0,
+          "max": 100
+        },
+        "conditionalColoring": {
+          "useConditionalColoring": false,
+          "singleColor": 3,
+          "paletteSingleColor": {
+            "index": 6
+          },
+          "segments": {
+            "limits": [],
+            "paletteColors": [
+              {
+                "index": 6
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "qEffectiveInterColumnSortOrder": [
+      0
+    ],
+    "qGrandTotalRow": [
+      {
+        "qText": "-16",
+        "qNum": -16,
+        "qElemNumber": -1,
+        "qState": "X",
+        "qIsTotalCell": true
+      }
+    ],
+    "qDataPages": [
+      {
+        "qMatrix": [
+          [
+            {
+              "qText": "-16",
+              "qNum": -16,
+              "qElemNumber": 0,
+              "qState": "L"
+            }
+          ]
+        ],
+        "qTails": [],
+        "qArea": {
+          "qLeft": 0,
+          "qTop": 0,
+          "qWidth": 1,
+          "qHeight": 1
+        }
+      }
+    ],
+    "qPivotDataPages": [],
+    "qStackedDataPages": [],
+    "qMode": "S",
+    "qNoOfLeftDims": -1,
+    "qTreeNodesOnDim": [],
+    "qColumnOrder": []
+  },
+  "showTitles": true,
+  "title": "Confiance des consommateurs",
+  "subtitle": "",
+  "footnote": "",
+  "showDetails": false,
+  "showMeasureTitle": false,
+  "textAlign": "center",
+  "layoutBehavior": "responsive",
+  "fontSize": "M",
+  "useLink": true,
+  "sheetLink": "83667c0c-581f-4574-9f6f-d73ca9eeac16",
+  "openUrlInNewTab": true,
+  "visualization": "kpi",
+  "snapshotData": {
+    "object": {
+      "size": {
+        "w": 496,
+        "h": 187
+      }
+    },
+    "rtl": false,
+    "isZoomed": false,
+    "elementRatio": 0.28984505688158424,
+    "parent": {
+      "h": 642.4,
+      "w": 1536
+    }
+  },
+  "visualizationType": "kpi",
+  "sourceObjectId": "NecvPxN",
+  "sheetId": "bbfead08-a568-4131-8a2d-dffe807583f1",
+  "timestamp": 1623331747280,
+  "isClone": false,
+  "supportExport": true
+}

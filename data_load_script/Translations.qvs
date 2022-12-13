@@ -1,0 +1,54 @@
+///$tab Translations
+// Translations:
+// LOAD
+//     "Lib",
+//     "vNL",
+//     "vFR",
+//     "vEN",
+//     "vDE"
+// FROM [lib://AttachedFiles/Translations.xlsx]
+// (ooxml, embedded labels, table is Sheet1);
+
+Translation:
+LOAD 
+    KPI_ID,
+    Type,
+    FR,
+    NL,
+    EN
+FROM [$(vParameterPath)/Translations.xlsx]
+(ooxml, embedded labels, table is URL)
+where len(trim(KPI_ID)) > 0;
+
+Concatenate(Translation)
+LOAD distinct
+    KPI_ID,
+    Type,
+    FR,
+    NL,
+    EN
+FROM [$(vParameterPath)/Translations.xlsx]
+(ooxml, embedded labels, table is [KPI Title])
+where len(trim(KPI_ID)) > 0;
+
+Concatenate(Translation)
+LOAD distinct
+    KPI_ID,
+    Type,
+    FR,
+    NL,
+    EN
+FROM [$(vParameterPath)/Translations.xlsx]
+(ooxml, embedded labels, table is [Information])
+where len(trim(KPI_ID)) > 0;
+
+Concatenate(Translation)
+LOAD distinct
+    KPI_ID,
+    Type,
+    FR,
+    NL,
+    EN
+FROM [$(vParameterPath)/Translations.xlsx]
+(ooxml, embedded labels, table is [Generic])
+where len(trim(KPI_ID)) > 0;

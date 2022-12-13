@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "acf04816-43e4-4d30-908f-f9bacebb264e",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vMaxPeriodKPI4",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "2022-03-01",
+  "qIsScriptCreated": true
+}

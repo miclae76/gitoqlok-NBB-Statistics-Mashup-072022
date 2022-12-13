@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "mpWrHW",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Unemployment EuroArea",
+    "qDef": "Num(sum({<KPINum={9},Zone={'EuroArea'}>}Value),'#,##0.0 %')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Generic'},KPI_ID={6}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.00%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Unemployment EuroArea",
+    "description": "",
+    "tags": []
+  }
+}

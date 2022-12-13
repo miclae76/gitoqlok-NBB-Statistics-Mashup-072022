@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "SRVGtf",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Regulated Deposits Latest",
+    "qDef": " \r\nIF(sum({<KPINum={12},Period={'$(vMaxPeriodKPI12)'}>}Value) >= sum({<KPINum={12},Period={'$(vMaxPeriodKPI12_lastmonth)'}>}Value),\nNum(sum({<KPINum={12},Period={'$(vMaxPeriodKPI12)'}>}Value),'#,##0')&' '&chr(9650),\nNum(sum({<KPINum={12},Period={'$(vMaxPeriodKPI12)'}>}Value),'#,##0')&' '&chr(9660))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "R",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#.##0",
+      "qDec": ",",
+      "qThou": "."
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": false,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Regulated Deposits Latest",
+    "description": "",
+    "tags": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "jcBb",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Loans to Businesses Latest",
+    "qDef": " \r\nIF(sum({<KPINum={7},Period={'$(vMaxPeriodKPI7)'}>}Value) >= sum({<KPINum={7},Period={'$(vMaxPeriodKPI7_lastmonth)'}>}Value),\nNum(sum({<KPINum={7},Period={'$(vMaxPeriodKPI7)'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={7},Period={'$(vMaxPeriodKPI7)'}>}Value),'#,##0.0 %')&' '&chr(9660))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Loans to Businesses Latest",
+    "description": "",
+    "tags": []
+  }
+}

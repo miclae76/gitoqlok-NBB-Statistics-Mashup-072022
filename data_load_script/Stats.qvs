@@ -1,0 +1,357 @@
+///$tab Stats
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+													/////////////// GDP ///////////////
+
+// Assign correct key
+BE_KEY_PIB:
+LOAD distinct
+    %Key_Series_FEC21137F69BCCC3
+FROM [lib://SDMX-PIB (agilos_vro)]
+ (XmlSimple, table is [MessageGroup/DataSet/Series/SeriesKey/Value])
+where value = 'BE';
+
+LET BE_KEY_PIB = Peek('%Key_Series_FEC21137F69BCCC3');
+
+NoConcatenate
+EA_KEY_PIB:
+LOAD distinct
+    %Key_Series_FEC21137F69BCCC3
+FROM [lib://SDMX-PIB (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/SeriesKey/Value])
+where value = 'EA';
+
+LET EA_KEY_PIB = Peek('%Key_Series_FEC21137F69BCCC3');
+
+Drop Table EA_KEY_PIB,BE_KEY_PIB;
+
+PIB_Mapping:
+Mapping
+Load * Inline [
+In,Out
+Q1,I
+Q2,II
+Q3,III
+Q4,IV
+];
+
+PIB_Mapping2:
+Mapping
+Load * Inline [
+In,Out
+Q1,01
+Q2,04
+Q3,07
+Q4,10
+];
+
+KPI:
+LOAD
+	subfield(Time,'-',1)&'-'&Applymap('PIB_Mapping2',subfield(Time,'-',2))&'-01' as PeriodTemp, // use to calculate max date
+    subfield(Time,'-',1)&'-'&Applymap('PIB_Mapping',subfield(Time,'-',2)) as Period,
+	'GrossDomesticProduct' as KPI,
+	'1' as KPINum,
+    'Belgium' as "Zone",
+    "ObsValue/value"/100 as "Value"
+FROM [lib://SDMX-PIB (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs])
+where %Key_Series_FEC21137F69BCCC3 = $(BE_KEY_PIB);
+
+Concatenate(KPI)
+LOAD
+	subfield(Time,'-',1)&'-'&Applymap('PIB_Mapping2',subfield(Time,'-',2))&'-01' as PeriodTemp, // use to calculate max date
+    subfield(Time,'-',1)&'-'&Applymap('PIB_Mapping',subfield(Time,'-',2)) as Period,
+	'GrossDomesticProduct' as KPI,
+	'1' as KPINum,
+    'EuroArea' as "Zone",
+    "ObsValue/value"/100 as "Value"
+FROM [lib://SDMX-PIB (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs])
+where %Key_Series_FEC21137F69BCCC3 = $(EA_KEY_PIB);  
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+															// General Governement Balance //
+
+FIN_Mapping:
+Mapping
+Load * Inline [
+In,Out
+03,I
+06,II
+09,III
+12,IV
+];
+
+Concatenate(KPI)
+LOAD
+	Date(PeriodQ,'YYYY-MM-DD') as PeriodTemp, // use to calculate max date
+    Year(PeriodQ)&'-'&Applymap('FIN_Mapping',subfield(date(PeriodQ),'/',2)) as Period,
+	'GeneralGovernementBalance' as KPI,
+	'2' as KPINum,
+    'Belgium' as "Zone",
+    Belgique/100 as "Value"
+FROM [lib://AttachedFiles/chiffres économie belge-part 2.xlsx]
+(ooxml, embedded labels, header is 2 lines, table is [Finances publiques]);
+
+Concatenate(KPI)
+LOAD
+	Date(PeriodQ,'YYYY-MM-DD') as PeriodTemp, // use to calculate max date
+    Year(PeriodQ)&'-'&Applymap('FIN_Mapping',subfield(date(PeriodQ),'/',2)) as Period,
+	'GeneralGovernementBalance' as KPI,
+	'2' as KPINum,
+    'EuroArea' as "Zone",
+    [Zone euro]/100 as "Value"
+FROM [lib://AttachedFiles/chiffres économie belge-part 2.xlsx]
+(ooxml, embedded labels, header is 2 lines, table is [Finances publiques]);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+														// Public Debt //
+
+Concatenate(KPI)
+LOAD  
+	Date(PeriodQ,'YYYY-MM-DD') as PeriodTemp, // use to calculate max date
+    Year(PeriodQ)&'-'&Applymap('FIN_Mapping',subfield(date(PeriodQ),'/',2)) as Period,
+	'PublicDebt' as KPI,
+	'3' as KPINum,
+    'Belgium' as "Zone",
+    Belgique1/100 as "Value"
+FROM [lib://AttachedFiles/chiffres économie belge-part 2.xlsx]
+(ooxml, embedded labels, header is 2 lines, table is [Finances publiques]);
+
+Concatenate(KPI)
+LOAD
+	Date(PeriodQ,'YYYY-MM-DD') as PeriodTemp, // use to calculate max date
+    Year(PeriodQ)&'-'&Applymap('FIN_Mapping',subfield(date(PeriodQ),'/',2)) as Period,
+	'PublicDebt' as KPI,
+	'3' as KPINum,
+    'EuroArea' as "Zone",
+    [Zone euro1]/100 as "Value"
+FROM [lib://AttachedFiles/chiffres économie belge-part 2.xlsx]
+(ooxml, embedded labels, header is 2 lines, table is [Finances publiques]);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+															// Balance of current operations //
+
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as Period,
+    'BalanceCurrentOperations' as KPI,
+	'4' as KPINum,
+    "ObsValue/value" as "Value"
+FROM [lib://Solde (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs]);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+															// Inflation //
+
+// Assign correct key
+BE_KEY_INF:
+LOAD distinct
+    %Key_Series_FEC21137F69BCCC3
+FROM [lib://SDMX-Inflation (agilos_vro)]
+ (XmlSimple, table is [MessageGroup/DataSet/Series/SeriesKey/Value])
+where value = 'BE';
+
+LET BE_KEY_INF = Peek('%Key_Series_FEC21137F69BCCC3');
+
+NoConcatenate
+EA_KEY_INF:
+LOAD distinct
+    %Key_Series_FEC21137F69BCCC3
+FROM [lib://SDMX-Inflation (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/SeriesKey/Value])
+where value = 'U2';
+
+LET EA_KEY_INF = Peek('%Key_Series_FEC21137F69BCCC3');
+
+Drop Table BE_KEY_INF,EA_KEY_INF;
+
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as "Period",
+    'Inflation' as KPI,
+	'5' as KPINum,
+    'Belgium' as "Zone",
+    "ObsValue/value"/100 as "Value"
+FROM [lib://SDMX-Inflation (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs])
+where %Key_Series_FEC21137F69BCCC3 = $(BE_KEY_INF);
+
+Concatenate(KPI)
+LOAD
+    Time & '-01' as "Period",
+    'Inflation' as KPI,
+	'5' as KPINum,
+    'EuroArea' as "Zone",
+    "ObsValue/value"/100 as "Value"
+FROM [lib://SDMX-Inflation (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs])
+where %Key_Series_FEC21137F69BCCC3 = $(EA_KEY_INF);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+																// Business Barometer //
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as Period,
+    'BusinessBarometer' as KPI,
+	'6' as KPINum,
+    "ObsValue/value" as "Value"
+FROM [lib://2. Conjunctuur (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs]);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+																// Loans to businesses //
+
+EA_KEY_CRED:
+LOAD distinct
+    %Key_Series_FEC21137F69BCCC3
+FROM [lib://SDMX-Credits (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/SeriesKey/Value])
+where %Key_Series_FEC21137F69BCCC3 <> 18;
+
+LET EA_KEY_CRED = Peek('%Key_Series_FEC21137F69BCCC3');
+Drop Table EA_KEY_CRED;
+
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as "Period",
+    'BusinessLoans' as KPI,
+	'7' as KPINum,
+    "ObsValue/value"/100 as "Value"
+FROM [lib://SDMX-Credits (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs])
+WHERE [%Key_Series_FEC21137F69BCCC3]=$(EA_KEY_CRED);                                                                 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+																// Long Term Rates //
+Concatenate(KPI)
+LOAD
+    "Time" as Period,
+    'LongTermRate' as KPI,
+	'8' as KPINum,
+    "ObsValue/value"/100 as "Value"
+FROM [lib://4. Lange termijn rente (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs]);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+																// Unemployment // 
+BE_KEY_CHOM:
+LOAD
+    %Key_Series_FEC21137F69BCCC3
+FROM [lib://SDMX-Chomage (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/SeriesKey/Value])
+where value = 'BE';
+
+LET BE_KEY_CHOM = Peek('%Key_Series_FEC21137F69BCCC3');
+
+NoConcatenate
+EA_KEY_CHOM:
+LOAD
+    %Key_Series_FEC21137F69BCCC3
+FROM [lib://SDMX-Chomage (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/SeriesKey/Value])
+where value = 'EA';
+
+LET EA_KEY_CHOM = Peek('%Key_Series_FEC21137F69BCCC3');
+
+Drop Table BE_KEY_CHOM,EA_KEY_CHOM;
+ 
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as "Period",
+    'Unemployment' as KPI,
+	'9' as KPINum,
+    'Belgium' as "Zone",
+    "ObsValue/value"/100 as "Value"
+FROM [lib://SDMX-Chomage (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs])
+where %Key_Series_FEC21137F69BCCC3 = $(BE_KEY_CHOM);
+
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as "Period",
+    'Unemployment' as KPI,
+	'9' as KPINum,
+    'EuroArea' as "Zone",
+    "ObsValue/value"/100 as "Value"
+FROM [lib://SDMX-Chomage (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs])
+where %Key_Series_FEC21137F69BCCC3 = $(EA_KEY_CHOM);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+																// Consumer Confidence // 
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as "Period",
+    'ConsumerConfidence' as KPI,
+	'10' as KPINum,
+    'Belgium' as "Zone",
+    "ObsValue/value" as "Value"
+FROM [lib://3. Consumenten (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs]);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+																// Loans to houselholds //
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as "Period",
+    'HouselholdLoans' as KPI,
+	'11' as KPINum,
+    "ObsValue/value"/100 as "Value"
+FROM [lib://SDMX-Credits (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs])
+WHERE [%Key_Series_FEC21137F69BCCC3]=$(BE_KEY_PIB); // same as PIB - we can not apply a clause on credits data - number is the same 
+ 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+																// Savings //
+Concatenate(KPI)
+LOAD
+    "Time" & '-01' as "Period",
+    'Savings' as KPI,
+	'12' as KPINum,
+    "ObsValue/value" as "Value"
+FROM [lib://Epargne (agilos_vro)]
+(XmlSimple, table is [MessageGroup/DataSet/Series/Obs]);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Max date calculation
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+For i = 1 to 12 //loop on each kpi
+
+Temp:
+LOAD 
+IF(match($(i),1,2,3),MAX(PeriodTemp),MAX(Period)) as MaxPeriod
+resident KPI
+where KPINum = $(i);
+
+let vMaxPeriodKPI$(i) = Date(Peek('MaxPeriod'),'YYYY-MM-DD');
+ 
+Next i 
+
+Drop table Temp; 
+
+For i = 1 to 3 //loop on each kpi with quarter
+Temp:
+LOAD Addmonths(max(PeriodTemp),-3) as MaxPeriod
+resident KPI
+where KPINum = $(i);
+
+let vMaxPeriodKPI$(i)_lastquarter = Date(Peek('MaxPeriod'),'YYYY-MM-DD');
+
+Next i 
+
+Drop table Temp;
+
+For i = 4 to 12 //loop on each kpi with months
+Temp:
+LOAD Addmonths(max(Period),-1) as MaxPeriod
+resident KPI
+where KPINum = $(i);
+
+let vMaxPeriodKPI$(i)_lastmonth = Date(Peek('MaxPeriod'),'YYYY-MM-DD');
+
+Next i 
+
+Drop table Temp;
+
+Exit script

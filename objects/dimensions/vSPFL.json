@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "vSPFL",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=//=IF(isnull(Date(Period)),Period,Date(Period))\r\n\n=Date(Period)"
+    ],
+    "qFieldLabels": [
+      "Period"
+    ],
+    "qLabelExpression": "Pick(match('$(v.Lang)','EN','FR','NL'),'Period','Période','Period')",
+    "title": "Period",
+    "coloring": {
+      "changeHash": "0.5658254025654124",
+      "colorMapRef": "vSPFL"
+    }
+  },
+  "qMetaDef": {
+    "title": "Period",
+    "description": "",
+    "tags": []
+  }
+}

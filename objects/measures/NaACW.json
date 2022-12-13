@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "NaACW",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "General Government Balance EuroArea Latest",
+    "qDef": "'EU  '& \r\nIF(sum({<KPINum={2},PeriodTemp={'$(vMaxPeriodKPI2)'},Zone={'EuroArea'}>}Value) >= sum({<KPINum={2},PeriodTemp={'$(vMaxPeriodKPI2_lastquarter)'},Zone={'EuroArea'}>}Value),\nNum(sum({<KPINum={2},PeriodTemp={'$(vMaxPeriodKPI2)'},Zone={'EuroArea'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={2},PeriodTemp={'$(vMaxPeriodKPI2)'},Zone={'EuroArea'}>}Value),'#,##0.0 %')&' '&chr(9660)) ",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "General Government Balance EuroArea Latest",
+    "description": "",
+    "tags": []
+  }
+}

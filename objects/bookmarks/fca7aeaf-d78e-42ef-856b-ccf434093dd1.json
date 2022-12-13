@@ -1,0 +1,83 @@
+{
+  "qInfo": {
+    "qId": "fca7aeaf-d78e-42ef-856b-ccf434093dd1",
+    "qType": "bookmark"
+  },
+  "qMetaDef": {
+    "title": "gte",
+    "description": ""
+  },
+  "creationDate": "2022-02-16T14:10:01.529Z",
+  "selectionFields": "PIBTime",
+  "qBookMark": {
+    "qStateData": [
+      {
+        "qStateName": "$",
+        "qFieldItems": [
+          {
+            "qDef": {
+              "qName": "PIBTime",
+              "qType": "NOT_PRESENT"
+            },
+            "qSelectInfo": {
+              "qRangeLo": "NaN",
+              "qRangeHi": "NaN",
+              "qNumberFormat": {
+                "qType": "U",
+                "qnDec": 10,
+                "qUseThou": 0
+              },
+              "qRangeInfo": [],
+              "qContinuousRangeInfo": []
+            },
+            "qValues": [
+              {
+                "qText": "2018-II",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2019-II",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2020-II",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2018-I",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2019-I",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2020-I",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2018-III",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2018-IV",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2019-III",
+                "qNumber": "NaN"
+              },
+              {
+                "qText": "2019-IV",
+                "qNumber": "NaN"
+              }
+            ],
+            "qExcludedValues": []
+          }
+        ]
+      }
+    ],
+    "qVariableItems": [],
+    "qPatches": []
+  }
+}

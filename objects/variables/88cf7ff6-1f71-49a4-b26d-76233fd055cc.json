@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "88cf7ff6-1f71-49a4-b26d-76233fd055cc",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "EA_KEY_CRED",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "392",
+  "qIsScriptCreated": true
+}

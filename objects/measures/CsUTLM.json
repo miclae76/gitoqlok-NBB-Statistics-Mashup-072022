@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "CsUTLM",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "General Governement Balance Belgium",
+    "qDef": "Num(sum({<KPINum={2},Zone={'Belgium'}>}Value),'#,##0.0 %')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Generic'},KPI_ID={5}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.00%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "General Governement Balance Belgium",
+    "description": "",
+    "tags": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "4fe4ae32-ac47-464e-a13e-bff50bfd8140",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "EA_KEY_INF",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "397",
+  "qIsScriptCreated": true
+}

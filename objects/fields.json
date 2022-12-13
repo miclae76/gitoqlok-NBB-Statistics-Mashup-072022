@@ -1,0 +1,107 @@
+[
+  {
+    "qName": "EN",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Translation"
+    ]
+  },
+  {
+    "qName": "FR",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Translation"
+    ]
+  },
+  {
+    "qName": "KPI",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "KPI"
+    ]
+  },
+  {
+    "qName": "KPINum",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "KPI"
+    ]
+  },
+  {
+    "qName": "KPI_ID",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Translation"
+    ]
+  },
+  {
+    "qName": "NL",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Translation"
+    ]
+  },
+  {
+    "qName": "Period",
+    "qTags": [],
+    "qSrcTables": [
+      "KPI"
+    ]
+  },
+  {
+    "qName": "PeriodTemp",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "KPI"
+    ]
+  },
+  {
+    "qName": "Type",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Translation"
+    ]
+  },
+  {
+    "qName": "Value",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "KPI"
+    ]
+  },
+  {
+    "qName": "Zone",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "KPI"
+    ]
+  }
+]

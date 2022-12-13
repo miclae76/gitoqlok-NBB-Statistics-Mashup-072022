@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "c4b07f37-fb78-4567-96cf-a7ab44b9f54e",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "BE_KEY_INF",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "18",
+  "qIsScriptCreated": true
+}

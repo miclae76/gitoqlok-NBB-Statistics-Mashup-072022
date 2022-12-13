@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "be220e52-099c-4b1d-8d38-a7bb67028b64",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "EA_KEY_CHOM",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "18",
+  "qIsScriptCreated": true
+}

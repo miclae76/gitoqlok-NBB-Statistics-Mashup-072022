@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "jUkPXLr",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Public Debt EuroArea Latest",
+    "qDef": "'EU  '& \r\nIF(sum({<KPINum={3},PeriodTemp={'$(vMaxPeriodKPI3)'},Zone={'EuroArea'}>}Value) >= sum({<KPINum={3},PeriodTemp={'$(vMaxPeriodKPI3_lastquarter)'},Zone={'EuroArea'}>}Value),\nNum(sum({<KPINum={3},PeriodTemp={'$(vMaxPeriodKPI3)'},Zone={'EuroArea'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={3},PeriodTemp={'$(vMaxPeriodKPI3)'},Zone={'EuroArea'}>}Value),'#,##0.0 %')&' '&chr(9660)) ",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Public Debt EuroArea Latest",
+    "description": "",
+    "tags": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "4a64c78c-3777-4f25-a068-ac58273ceec9",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vParameterPath",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "lib://NBB_KernStatistieken",
+  "qIsScriptCreated": true
+}

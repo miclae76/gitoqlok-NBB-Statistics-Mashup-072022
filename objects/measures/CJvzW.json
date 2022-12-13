@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "CJvzW",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Public Debt EuroArea",
+    "qDef": "Num(sum({<KPINum={3},Zone={'EuroArea'}>}Value),'#,##0.0 %')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Generic'},KPI_ID={6}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Public Debt EuroArea",
+    "description": "",
+    "tags": []
+  }
+}

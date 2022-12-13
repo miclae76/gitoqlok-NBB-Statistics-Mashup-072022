@@ -1,0 +1,23 @@
+{
+  "qInfo": {
+    "qId": "773e8c56-9304-4fee-9795-cdc94f13b611",
+    "qType": "bookmark"
+  },
+  "qMetaDef": {
+    "title": "PIB",
+    "description": ""
+  },
+  "creationDate": "2021-07-22T08:01:58.066Z",
+  "sheetId": "3bce6aa8-e5d2-410f-a1a3-9bd6de385351",
+  "selectionFields": "",
+  "qBookMark": {
+    "qStateData": [
+      {
+        "qStateName": "$",
+        "qFieldItems": []
+      }
+    ],
+    "qVariableItems": [],
+    "qPatches": []
+  }
+}

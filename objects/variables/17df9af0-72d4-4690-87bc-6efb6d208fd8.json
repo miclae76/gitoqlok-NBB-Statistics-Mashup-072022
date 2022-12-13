@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "17df9af0-72d4-4690-87bc-6efb6d208fd8",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "EA_KEY_PIB",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "188",
+  "qIsScriptCreated": true
+}

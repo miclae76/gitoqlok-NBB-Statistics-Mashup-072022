@@ -1,0 +1,12 @@
+{
+  "qTitle": "NBB Statistics - Mashup 072022",
+  "qMigrationHash": "504d4e39a7133ee172fbe29aa58348b1e4054149",
+  "qThumbnail": {
+    "qUrl": "/appcontent/1b32629b-abb5-4d30-8d28-e858470c0e60/belgecon.png"
+  },
+  "published": false,
+  "publishTime": "1753-01-01T00:00:00.000Z",
+  "description": "Data viz for NBB Public Statistics Mashup",
+  "dynamicColor": "hsla(43,18%,43%,1)",
+  "stream": null
+}

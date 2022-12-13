@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "hMJETZ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Inflation Rate EuroArea Latest",
+    "qDef": "'EU  '& \r\nIF(sum({<KPINum={5},Period={'$(vMaxPeriodKPI5)'},Zone={'EuroArea'}>}Value) >= sum({<KPINum={5},Period={'$(vMaxPeriodKPI5_lastmonth)'},Zone={'EuroArea'}>}Value),\nNum(sum({<KPINum={5},Period={'$(vMaxPeriodKPI5)'},Zone={'EuroArea'}>}Value),'#,##0.0 %')&' '&chr(9650),\nNum(sum({<KPINum={5},Period={'$(vMaxPeriodKPI5)'},Zone={'EuroArea'}>}Value),'#,##0.0 %')&' '&chr(9660)) ",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0.0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Inflation Rate EuroArea Latest",
+    "description": "",
+    "tags": []
+  }
+}

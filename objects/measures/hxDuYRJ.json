@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "hxDuYRJ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Balance of current operations",
+    "qDef": "Num(sum({<KPINum={4}>}Value),'#,##0')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Title'},KPI_ID={4}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "R",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#.##0",
+      "qDec": ",",
+      "qThou": "."
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Balance of current operations",
+    "description": "",
+    "tags": []
+  }
+}

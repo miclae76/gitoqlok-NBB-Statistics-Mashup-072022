@@ -1,0 +1,194 @@
+{
+  "qInfo": {
+    "qId": "bebf0ec9-7062-4462-90a0-215358c99917",
+    "qType": "snapshot"
+  },
+  "qMetaDef": {
+    "title": "Baromètre de conjoncture",
+    "description": "",
+    "annotation": "test"
+  },
+  "creationDate": "2021-09-14T13:00:04.273Z",
+  "qMeta": {
+    "privileges": [
+      "read",
+      "update",
+      "delete",
+      "exportdata"
+    ]
+  },
+  "qSelectionInfo": {},
+  "qHyperCube": {
+    "qSize": {
+      "qcx": 4,
+      "qcy": 1
+    },
+    "qDimensionInfo": [],
+    "qMeasureInfo": [
+      {
+        "qFallbackTitle": "Sum({<ConjTime={'$(vMaxCreditDateConj)'}>}ConjObs)\r\n\n",
+        "qApprMaxGlyphCount": 3,
+        "qCardinal": 0,
+        "qSortIndicator": "D",
+        "qNumFormat": {
+          "qType": "U",
+          "qnDec": 0,
+          "qUseThou": 0
+        },
+        "qMin": 7.6,
+        "qMax": 7.6,
+        "qIsAutoFormat": true,
+        "qAttrExprInfo": [],
+        "qAttrDimInfo": [],
+        "qTrendLines": [],
+        "autoSort": true,
+        "cId": "YAcsyZ",
+        "numFormatFromTemplate": true,
+        "isCustomFormatted": false
+      },
+      {
+        "qFallbackTitle": "up green arrow",
+        "qApprMaxGlyphCount": 1,
+        "qCardinal": 0,
+        "qSortIndicator": "D",
+        "qNumFormat": {
+          "qType": "U",
+          "qnDec": 0,
+          "qUseThou": 0
+        },
+        "qMin": "NaN",
+        "qMax": "NaN",
+        "qIsAutoFormat": true,
+        "qAttrExprInfo": [],
+        "qAttrDimInfo": [],
+        "qTrendLines": [],
+        "autoSort": true,
+        "cId": "veaHM",
+        "numFormatFromTemplate": true
+      },
+      {
+        "qFallbackTitle": "down red arrow",
+        "qApprMaxGlyphCount": 1,
+        "qCardinal": 0,
+        "qSortIndicator": "D",
+        "qNumFormat": {
+          "qType": "U",
+          "qnDec": 0,
+          "qUseThou": 0
+        },
+        "qMin": "NaN",
+        "qMax": "NaN",
+        "qIsAutoFormat": true,
+        "qAttrExprInfo": [],
+        "qAttrDimInfo": [],
+        "qTrendLines": [],
+        "autoSort": true,
+        "cId": "VmSqGUj",
+        "numFormatFromTemplate": true
+      },
+      {
+        "qFallbackTitle": "$(vMaxCreditDateConj2)",
+        "qApprMaxGlyphCount": 1,
+        "qCardinal": 0,
+        "qSortIndicator": "D",
+        "qNumFormat": {
+          "qType": "U",
+          "qnDec": 0,
+          "qUseThou": 0
+        },
+        "qMin": "NaN",
+        "qMax": "NaN",
+        "qIsAutoFormat": true,
+        "qAttrExprInfo": [],
+        "qAttrDimInfo": [],
+        "qTrendLines": [],
+        "autoSort": true,
+        "cId": "xSmCSR",
+        "numFormatFromTemplate": true
+      }
+    ],
+    "qEffectiveInterColumnSortOrder": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "qGrandTotalRow": [
+      {
+        "qText": "7.6",
+        "qNum": 7.6,
+        "qElemNumber": -1,
+        "qState": "X",
+        "qIsTotalCell": true
+      },
+      {
+        "qText": "-",
+        "qNum": "NaN",
+        "qElemNumber": -1,
+        "qState": "X",
+        "qIsTotalCell": true
+      },
+      {
+        "qText": "-",
+        "qNum": "NaN",
+        "qElemNumber": -1,
+        "qState": "X",
+        "qIsTotalCell": true
+      },
+      {
+        "qText": "-",
+        "qNum": "NaN",
+        "qElemNumber": -1,
+        "qState": "X",
+        "qIsTotalCell": true
+      }
+    ],
+    "qDataPages": [],
+    "qPivotDataPages": [],
+    "qStackedDataPages": [],
+    "qMode": "S",
+    "qNoOfLeftDims": -1,
+    "qTreeNodesOnDim": [],
+    "qColumnOrder": []
+  },
+  "showTitles": true,
+  "title": "Baromètre de conjoncture",
+  "subtitle": "",
+  "footnote": "2021-08- Indicateur du mois",
+  "showDetails": false,
+  "responsive": "all",
+  "markdown": "^[#[\n]({\"index\":6,\"color\":\"#4477aa\"})](right)^[#[%[**@[=[](YAcsyZ)](https://qliksense.uat.nbb/sense/app/b22bb9fd\\-5816\\-4820\\-9217\\-743d8d861c14/sheet/e3ddb6a2\\-736b\\-4069\\-ab60\\-416923bd1af7/state/analysis)**](3)]({\"index\":-1,\"color\":\"#185294\"})](right)^[#[%[\n](4)]({\"index\":6,\"color\":\"#4477aa\"})](right)=[](veaHM)=[](VmSqGUj)=[](xSmCSR)",
+  "images": [],
+  "background": {
+    "isUsed": true,
+    "size": "fill",
+    "position": "centerCenter",
+    "url": {
+      "qStaticContentUrlDef": {
+        "qUrl": "/appcontent/1b32629b-abb5-4d30-8d28-e858470c0e60/conjoncture_Artboard 6.png"
+      }
+    }
+  },
+  "visualization": "text-image",
+  "snapshotData": {
+    "object": {
+      "size": {
+        "w": 468,
+        "h": 257
+      }
+    },
+    "rtl": false,
+    "scrollTopPercent": 0,
+    "verticalScrollWidth": -0.5,
+    "parent": {
+      "h": 857,
+      "w": 1920
+    }
+  },
+  "visualizationType": "text-image",
+  "sourceObjectId": "jZQJwGp",
+  "sheetId": "284938eb-b9e9-4ce4-9174-7800091d0334",
+  "timestamp": 1631624404141,
+  "isClone": false,
+  "supportExport": true
+}

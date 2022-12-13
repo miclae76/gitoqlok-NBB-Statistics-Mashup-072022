@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "aNpCsw",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Long Term Rates",
+    "qDef": "Num(sum({<KPINum={8}>}Value),'#,##0.0 %')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=Only({<Type={'Title'},KPI_ID={8}>}$(v.Lang))",
+    "qNumFormat": {
+      "qType": "R",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0.00",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Long Term Rates",
+    "description": "",
+    "tags": []
+  }
+}

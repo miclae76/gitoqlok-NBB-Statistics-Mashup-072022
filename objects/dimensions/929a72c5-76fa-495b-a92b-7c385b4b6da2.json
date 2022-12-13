@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "929a72c5-76fa-495b-a92b-7c385b4b6da2",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=Period"
+    ],
+    "qFieldLabels": [
+      "Period (Quarter)"
+    ],
+    "qLabelExpression": "Pick(match('$(v.Lang)','EN','FR','NL'),'Period','Période','Period')",
+    "title": "Period (Quarter)",
+    "coloring": {
+      "changeHash": "0.42142291765639683",
+      "colorMapRef": "929a72c5-76fa-495b-a92b-7c385b4b6da2"
+    }
+  },
+  "qMetaDef": {
+    "title": "Period (Quarter)",
+    "description": "",
+    "tags": []
+  }
+}

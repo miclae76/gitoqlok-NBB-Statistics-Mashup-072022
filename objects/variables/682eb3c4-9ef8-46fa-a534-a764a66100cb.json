@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "682eb3c4-9ef8-46fa-a534-a764a66100cb",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "BE_KEY_PIB",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "18",
+  "qIsScriptCreated": true
+}
